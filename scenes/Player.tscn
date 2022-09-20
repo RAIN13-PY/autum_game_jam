@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/icon.png" type="Texture" id=2]
+[ext_resource path="res://scenes/sword.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31, 28.5 )
@@ -13,5 +14,10 @@ script = ExtResource( 1 )
 position = Vector2( 0, -1.5 )
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Player" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+
+[node name="sword" type="Sprite" parent="."]
+position = Vector2( 1, 117 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
