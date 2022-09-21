@@ -1,20 +1,26 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/PauseMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/UI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Pumpkin.tscn" type="PackedScene" id=5]
 
 [node name="Stage" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 267, 149 )
-
-[node name="Enemy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 400, 100 )
+position = Vector2( 175, 407 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 3 )]
 margin_left = 270.0
 margin_top = 150.0
 margin_right = 270.0
 margin_bottom = 150.0
-color = Color( 0, 0, 0, 0 )
+
+[node name="Enemy" parent="." instance=ExtResource( 2 )]
+
+[node name="UI" parent="." instance=ExtResource( 4 )]
+
+[node name="Pumpkin" parent="." instance=ExtResource( 5 )]
+position = Vector2( 800, 400 )
+scale = Vector2( 0.5, 0.5 )
