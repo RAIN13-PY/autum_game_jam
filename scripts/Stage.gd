@@ -1,16 +1,18 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var pumpkin = preload("res://scenes/Pumpkin.tscn")
+var enemy = preload("res://scenes/Enemy.tscn")
+func spawn_pumpkin():
+	Global.instance_node(pumpkin, Vector2(rand_range(0,1024), rand_range(0, 600)), self)
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _on_Enemy_Spawn_Timer_timeout():
+	var enemy_pos = Vector2(rand_range(-50, 1074), rand_range(-50, 650))
+	while enemy_pos.x > -10 and enemy_pos.x < 1040 and enemy_pos.y > -10 and enemy_pos.y < 610:
+		enemy_pos = Vector2(rand_range(-50, 1074), rand_range(-50, 650))
+	Global.instance_node(enemy, enemy_pos, self)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Pumpkin_random_spawn_timeout():
+	spawn_pumpkin()
