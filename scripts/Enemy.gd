@@ -2,7 +2,7 @@ extends KinematicBody2D
 var speed = 100
 var velocity = Vector2()
 var player_found = false
-var health = 3
+var health = 1
 func _process(delta):
 	if health <= 0:
 		queue_free()
@@ -27,3 +27,4 @@ func _on_Hitbox_area_entered(area):
 		queue_free()
 	elif area.is_in_group("Sword"):
 		health -= 1
+		Global.Player_points += round(rand_range(1,10))

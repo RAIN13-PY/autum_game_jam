@@ -7,3 +7,4 @@ func _on_Area2D_area_entered(area):
 		Stage.spawn_pumpkin()
 		queue_free()
 		
+

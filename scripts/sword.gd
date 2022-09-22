@@ -12,7 +12,3 @@ func _process(delta):
 	) + Vector2(get_parent().global_position.x, get_parent().global_position.y)
 	look_at(get_parent().global_position)
 
-
-func _on_Area2D_area_entered(area):
-	if area.is_in_group("Enemy"):
-		print("Sword Hit! : "+area.get_name())

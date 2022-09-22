@@ -17,6 +17,7 @@ config/icon="res://sprites/icon.png"
 [autoload]
 
 Global="*res://scripts/Global.gd"
+Stage="*res://scripts/Stage.gd"
 
 [display]
 

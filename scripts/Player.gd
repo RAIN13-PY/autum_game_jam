@@ -18,6 +18,5 @@ func _process(delta):
 
 func _on_Player_area_entered(area):
 	if area.is_in_group("Enemy"): # Add {and} to add other objects to the list
-		print("Player Hit:" + area.get_name() + ": and did 1 damage") # debug
 		area.queue_free()  # deletes area on impact for more realism. We should make a particle for this death so it looks smoother
 		Global.health -= 1 

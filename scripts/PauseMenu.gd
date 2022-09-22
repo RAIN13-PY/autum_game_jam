@@ -12,7 +12,7 @@ func pause():
 	animator.play("Pause")
 	get_tree().paused = true
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("pause") and paused == false:
 		pause()
 func _on_ResumeButton_pressed():
