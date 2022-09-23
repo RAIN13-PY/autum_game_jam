@@ -8,9 +8,11 @@ var paused = false
 func unpause():
 	animator.play("UnPause")
 	get_tree().paused = false
+	paused = false
 func pause():
 	animator.play("Pause")
 	get_tree().paused = true
+	paused = true
 
 func _process(_delta):
 	if Input.is_action_just_pressed("pause") and paused == false:
